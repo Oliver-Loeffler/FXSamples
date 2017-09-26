@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Digital-7';
+    src: url('digital-7.ttf');
+}
+
+.result {
+    -fx-font-family: "Digital-7";
+    -fx-font-size: 64px;
+    -fx-background-color: black;
+    -fx-text-fill: lawngreen;
+}
+
+.text-field {
+    -fx-border-style: none;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+}
+
+.button {
+    -fx-font-size: 32px;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+}
