@@ -1,8 +1,8 @@
-package sample.view1;
+package sample.calculator1;
 
 import javafx.beans.property.*;
 
-public class View1Model {
+public class CalculatorModel {
 
     private final SimpleIntegerProperty a = new SimpleIntegerProperty(0);
 
@@ -12,7 +12,7 @@ public class View1Model {
 
     private final SimpleObjectProperty<Operation> op = new SimpleObjectProperty<>(Operation.NONE);
 
-    public View1Model() {
+    public CalculatorModel() {
         a.addListener((a,b,c) -> print());
         b.addListener((a,b,c) -> print());
         result.addListener((a,b,c) -> print());

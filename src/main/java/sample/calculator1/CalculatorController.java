@@ -1,4 +1,4 @@
-package sample.view1;
+package sample.calculator1;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -11,9 +11,9 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class View1Controller implements Initializable {
+public class CalculatorController implements Initializable {
 
-    private final View1Model model;
+    private final CalculatorModel model;
 
     @FXML
     private Button seven;
@@ -64,9 +64,6 @@ public class View1Controller implements Initializable {
     private Button clear;
 
     @FXML
-    private Button squareRoot;
-
-    @FXML
     private Label operation;
 
     @FXML
@@ -74,7 +71,7 @@ public class View1Controller implements Initializable {
 
     private boolean useA = true;
 
-    public View1Controller(final View1Model model) {
+    public CalculatorController(final CalculatorModel model) {
         this.model = Objects.requireNonNull(model);
     }
 
@@ -91,13 +88,10 @@ public class View1Controller implements Initializable {
         nine.setOnAction(e -> takeNumberInput(9));
         zero.setOnAction(e -> takeNumberInput(0));
 
-        plus.setOnAction(e -> toggleOperand(false, View1Model.Operation.ADD));
-        minus.setOnAction(e -> toggleOperand(false, View1Model.Operation.SUB));
-        multiply.setOnAction(e -> toggleOperand(false, View1Model.Operation.MUL));
-        divide.setOnAction(e -> toggleOperand(false, View1Model.Operation.DIV));
-        squareRoot.setOnAction(e -> toggleOperand(false, View1Model.Operation.SQRT));
-
-        squareRoot.setText("\u221A");
+        plus.setOnAction(e -> toggleOperand(false, CalculatorModel.Operation.ADD));
+        minus.setOnAction(e -> toggleOperand(false, CalculatorModel.Operation.SUB));
+        multiply.setOnAction(e -> toggleOperand(false, CalculatorModel.Operation.MUL));
+        divide.setOnAction(e -> toggleOperand(false, CalculatorModel.Operation.DIV));
 
         clear.setOnAction(e -> reset());
 
@@ -143,7 +137,7 @@ public class View1Controller implements Initializable {
         }
     }
 
-    private void toggleOperand(boolean value, View1Model.Operation operation){
+    private void toggleOperand(boolean value, CalculatorModel.Operation operation) {
         this.useA = value;
         model.setOp(operation);
         result.textProperty().unbind();
@@ -159,7 +153,7 @@ public class View1Controller implements Initializable {
         model.setA(0);
         model.setB(0);
         model.setResult(0);
-        toggleOperand(true, View1Model.Operation.NONE);
+        toggleOperand(true, CalculatorModel.Operation.NONE);
     }
 
     private void divisionByZeroAlert() {

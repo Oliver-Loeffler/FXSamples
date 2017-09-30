@@ -1,38 +1,31 @@
-package sample.view1;
+package sample.calculator1;
 
-import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.input.MouseButton;
 import javafx.stage.Stage;
 import org.junit.*;
-import org.testfx.framework.junit.ApplicationTest;
-import org.testfx.robot.Motion;
-import org.testfx.service.support.Capture;
 import sample.Main;
+import sample.ApplicationTestTemplate;
 import sample.ViewFactory;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.lang.management.PlatformLoggingMXBean;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicReference;
 
 import static org.junit.Assert.fail;
-import static sample.view1.View1Model.Operation.*;
+import static sample.calculator1.CalculatorModel.Operation.*;
 
-public class View1Test extends ApplicationTest {
+public class CalculatorViewTest extends ApplicationTestTemplate {
 
     @Override
     public void start(Stage stage) throws IOException {
         stage.setTitle("Calculator");
-        Scene scene = new Scene(ViewFactory.createView1());
-        scene.getStylesheets().add(Main.class.getResource("Calculator.css").toExternalForm());
+        Scene scene = new Scene(ViewFactory.createSimpleCalculatorView());
+        scene.getStylesheets().add(Main.class.getResource("AppSample.css").toExternalForm());
         stage.setScene(scene);
         Thread.currentThread().setUncaughtExceptionHandler((t,e)->errorInUi.set(e));
         stage.show();
@@ -51,37 +44,37 @@ public class View1Test extends ApplicationTest {
 
     @Test
     public void performAddition() {
-        new View1Object(this).calculateAndAssert(0, ADD, 0);
+        new CalculatorViewAdapter(this).calculateAndAssert(0, ADD, 0);
     }
 
     @Test
     public void performAdditionOfLargeNumbers() throws IOException {
-        new View1Object(this).calculateAndAssert(12340, ADD, 1);
+        new CalculatorViewAdapter(this).calculateAndAssert(12340, ADD, 1);
     }
 
     @Test
-    public void viewIsCreatable() throws IOException {
+    public void createViewAndMakeScreenshot() throws IOException {
         Parent put = lookup("#rootpane").query();
         BufferedImage bImage = SwingFXUtils.fromFXImage(capture(put).getImage(), null);
-        ImageIO.write(bImage, "png", new File("sceneRoot.png") );
+        ImageIO.write(bImage, "png", new File("CalculatorScreen.png"));
    }
 
 
     @Test
     public void performSubtractionOfLargeNumbers() throws IOException {
-        new View1Object(this).calculateAndAssert(12340, SUB, 1);
+        new CalculatorViewAdapter(this).calculateAndAssert(12340, SUB, 1);
 
     }
 
     @Test
     public void performMultiplyOfLargeNumbers() throws IOException {
-        new View1Object(this).calculateAndAssert(12340, MUL, 0);
+        new CalculatorViewAdapter(this).calculateAndAssert(12340, MUL, 0);
 
     }
 
     @Test
     public void performDivisionOfLargeNumbers() throws IOException {
-        new View1Object(this)
+        new CalculatorViewAdapter(this)
                 .enterOperandValue(12340)
                 .enterOperation(DIV)
                 .enterOperandValue(1)
@@ -91,7 +84,7 @@ public class View1Test extends ApplicationTest {
 
     @Test
     public void performDivisionOfNotSoLargeNumbers() throws IOException {
-        new View1Object(this)
+        new CalculatorViewAdapter(this)
                 .enterOperandValue(999)
                 .enterOperation(DIV)
                 .enterOperandValue(333)
@@ -101,19 +94,19 @@ public class View1Test extends ApplicationTest {
 
     @Test
     public void performMissingNumberInputs() {
-        new View1Object(this)
+        new CalculatorViewAdapter(this)
                 .calculateAndAssert(856, ADD, 14 );
     }
 
     @Test(expected = ArithmeticException.class)
     public void divisionByZero() {
-        new View1Object(this)
+        new CalculatorViewAdapter(this)
                 .calculateAndAssert(10, DIV, 0 );
     }
 
     @Test
     public void performEndlessResets() {
-        new View1Object(this)
+        new CalculatorViewAdapter(this)
                 .clear()
                 .assertResultCleared().clear()
                 .assertResultCleared().clear()
@@ -128,7 +121,7 @@ public class View1Test extends ApplicationTest {
     @Test
     public void multipleCalculationsWithClearInbetween() {
 
-        new View1Object(this)
+        new CalculatorViewAdapter(this)
                 .calculateAndAssert(24, DIV, 2)
                 .clear()
                 .assertResultCleared()
@@ -136,7 +129,7 @@ public class View1Test extends ApplicationTest {
                 .clear()
                 .assertResultCleared();
 
-        new View1Object(this)
+        new CalculatorViewAdapter(this)
                 .enterOperandValue(2)
                 .enterOperandValue(4)
                 .enterOperation(DIV)
@@ -154,21 +147,9 @@ public class View1Test extends ApplicationTest {
                 .assertResultCleared();
     }
 
+    @Test
     public void arithmeticExceptionInCaseOfUnsupportedOperation() {
-        new View1Object(this).calculateResult();
+        new CalculatorViewAdapter(this).calculateResult();
     }
 
-    public static AtomicReference<Throwable> errorInUi = new AtomicReference<>(null);
-
-    @Before
-    public void resetUiError() {
-        errorInUi.set(null);
-    }
-
-    @After
-    public void checkUiExceptions() throws Throwable {
-        if (errorInUi.get() != null) {
-            fail(errorInUi.get().getMessage());
-        }
-    }
 }

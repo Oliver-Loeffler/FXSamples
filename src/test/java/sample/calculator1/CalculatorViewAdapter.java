@@ -1,4 +1,4 @@
-package sample.view1;
+package sample.calculator1;
 
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseButton;
@@ -7,11 +7,11 @@ import org.testfx.api.FxRobotInterface;
 
 import static junit.framework.TestCase.fail;
 
-public class View1Object {
+public class CalculatorViewAdapter {
 
     private final FxRobotInterface robot;
 
-    public View1Object(FxRobotInterface robot) {
+    CalculatorViewAdapter(FxRobotInterface robot) {
         this.robot = robot;
     }
 
@@ -19,7 +19,7 @@ public class View1Object {
         return robot;
     }
 
-    public View1Object enterOperandValue(int operandValue) {
+    CalculatorViewAdapter enterOperandValue(int operandValue) {
         for (char c : String.valueOf(operandValue).toCharArray()) {
             switch (c) {
                 case '1' :  getRobot().clickOn("#one", MouseButton.PRIMARY); break;
@@ -38,7 +38,7 @@ public class View1Object {
         return this;
     }
 
-    public View1Object enterOperation(View1Model.Operation operation) {
+    CalculatorViewAdapter enterOperation(CalculatorModel.Operation operation) {
         switch (operation) {
             case ADD: getRobot().clickOn("#plus", MouseButton.PRIMARY); break;
             case SUB: getRobot().clickOn("#minus", MouseButton.PRIMARY); break;
@@ -51,27 +51,27 @@ public class View1Object {
         return this;
     }
 
-    public View1Object calculateResult() {
+    CalculatorViewAdapter calculateResult() {
         getRobot().clickOn("#equals", MouseButton.PRIMARY);
         return this;
     }
 
-    public View1Object assertResult(int i) {
+    CalculatorViewAdapter assertResult(int i) {
         TextField put = getRobot().lookup("#result").query();
         Assert.assertEquals(String.valueOf(i), put.getText());
         return this;
     }
 
-    public View1Object clear() {
+    CalculatorViewAdapter clear() {
         getRobot().clickOn("#clear", MouseButton.PRIMARY);
         return this;
     }
 
-    public View1Object assertResultCleared() {
+    public CalculatorViewAdapter assertResultCleared() {
         return assertResult(0);
     }
 
-    public View1Object calculateAndAssert(int a, View1Model.Operation operand, int b) {
+    public CalculatorViewAdapter calculateAndAssert(int a, CalculatorModel.Operation operand, int b) {
         this.enterOperandValue(a).enterOperation(operand).enterOperandValue(b).calculateResult();
         switch (operand) {
             case ADD: assertResult(a+b); break;
