@@ -7,6 +7,8 @@ import sample.modulesview.ModulesViewController;
 import sample.modulesview.ModulesViewModel;
 import sample.calculator1.CalculatorController;
 import sample.calculator1.CalculatorModel;
+import sample.calculator2.BigDecimalCalculatorController;
+import sample.calculator2.BigDecimalCalculatorModel;
 
 import java.io.IOException;
 
@@ -14,6 +16,14 @@ public class ViewFactory {
 
     private ViewFactory() {
 
+    }
+    
+    public static Parent createBigDecimalCalculatorView() throws IOException {
+    		FXMLLoader loader = new FXMLLoader(BigDecimalCalculatorController.class.getResource("BigDecimalCalculatorView.fxml"));
+    		BigDecimalCalculatorModel model = new BigDecimalCalculatorModel();
+    		BigDecimalCalculatorController controller = new BigDecimalCalculatorController(model);
+    		loader.setController(controller);
+    		return loader.load();
     }
 
     public static Parent createSimpleCalculatorView() throws IOException {
@@ -37,6 +47,10 @@ public class ViewFactory {
         primaryStage.setTitle("Business Application");
         Parent calculatorView = ViewFactory.createSimpleCalculatorView();
         model.addFromNode(calculatorView, "SimpleCalculator");
+        
+        Parent bigDecimalCalcView = ViewFactory.createBigDecimalCalculatorView();
+        model.addFromNode(bigDecimalCalcView, "BigDecimalCalculator");
+        
         return modulesView;
     }
 }

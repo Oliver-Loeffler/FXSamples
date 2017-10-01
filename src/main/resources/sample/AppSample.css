@@ -10,6 +10,13 @@
     -fx-text-fill: lawngreen;
 }
 
+.bigDecimalResult {
+    -fx-font-family: "Digital-7";
+    -fx-font-size: 64px;
+    -fx-background-color: black;
+    -fx-text-fill: deepskyblue;
+}
+
 .text-field {
     -fx-border-style: none;
     -fx-border-radius: 0px;
