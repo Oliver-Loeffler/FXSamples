@@ -1,21 +1,23 @@
-package sample.calculator1;
+package net.raumzeitfalle.fxsamples.pocketcalculator.simple;
 
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import net.raumzeitfalle.fxsamples.pocketcalculator.ApplicationTestTemplate;
+import net.raumzeitfalle.fxsamples.pocketcalculator.Main;
+import net.raumzeitfalle.fxsamples.pocketcalculator.ViewFactory;
+
 import org.junit.*;
-import sample.Main;
-import sample.ApplicationTestTemplate;
-import sample.ViewFactory;
 
 import javax.imageio.ImageIO;
+
+import static net.raumzeitfalle.fxsamples.pocketcalculator.simple.CalculatorModel.Operation.*;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
-import static sample.calculator1.CalculatorModel.Operation.*;
 
 public class CalculatorViewTest extends ApplicationTestTemplate {
 

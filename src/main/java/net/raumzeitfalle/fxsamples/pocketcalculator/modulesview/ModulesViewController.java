@@ -1,4 +1,4 @@
-package sample.modulesview;
+package net.raumzeitfalle.fxsamples.pocketcalculator.modulesview;
 
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import javafx.beans.InvalidationListener;

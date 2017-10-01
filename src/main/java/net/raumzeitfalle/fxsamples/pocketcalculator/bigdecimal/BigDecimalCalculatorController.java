@@ -1,4 +1,4 @@
-package sample.calculator2;
+package net.raumzeitfalle.fxsamples.pocketcalculator.bigdecimal;
 
 import java.net.URL;
 import java.util.ResourceBundle;

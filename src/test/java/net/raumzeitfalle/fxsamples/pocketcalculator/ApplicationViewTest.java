@@ -1,11 +1,13 @@
-package sample;
+package net.raumzeitfalle.fxsamples.pocketcalculator;
 
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import net.raumzeitfalle.fxsamples.pocketcalculator.Main;
+import net.raumzeitfalle.fxsamples.pocketcalculator.ViewFactory;
+
 import org.junit.Test;
-import sample.ViewFactory;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

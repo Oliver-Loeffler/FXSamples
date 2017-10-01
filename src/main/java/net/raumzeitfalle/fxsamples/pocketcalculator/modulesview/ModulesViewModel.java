@@ -1,4 +1,4 @@
-package sample.modulesview;
+package net.raumzeitfalle.fxsamples.pocketcalculator.modulesview;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

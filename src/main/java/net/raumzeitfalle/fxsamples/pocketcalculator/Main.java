@@ -1,4 +1,4 @@
-package sample;
+package net.raumzeitfalle.fxsamples.pocketcalculator;
 
 import javafx.application.Application;
 import javafx.scene.Parent;

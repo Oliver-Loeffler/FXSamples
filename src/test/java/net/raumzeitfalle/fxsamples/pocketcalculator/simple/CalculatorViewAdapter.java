@@ -1,7 +1,9 @@
-package sample.calculator1;
+package net.raumzeitfalle.fxsamples.pocketcalculator.simple;
 
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseButton;
+import net.raumzeitfalle.fxsamples.pocketcalculator.simple.CalculatorModel;
+
 import org.junit.Assert;
 import org.testfx.api.FxRobotInterface;
 

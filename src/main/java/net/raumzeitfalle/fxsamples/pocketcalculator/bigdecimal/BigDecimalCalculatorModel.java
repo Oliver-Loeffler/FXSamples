@@ -1,4 +1,4 @@
-package sample.calculator2;
+package net.raumzeitfalle.fxsamples.pocketcalculator.bigdecimal;
 
 import javafx.beans.property.ReadOnlyStringProperty;
 import javafx.beans.property.SimpleObjectProperty;

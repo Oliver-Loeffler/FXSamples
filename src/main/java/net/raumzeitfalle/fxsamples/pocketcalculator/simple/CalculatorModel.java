@@ -1,4 +1,4 @@
-package sample.calculator1;
+package net.raumzeitfalle.fxsamples.pocketcalculator.simple;
 
 import javafx.beans.property.*;
 

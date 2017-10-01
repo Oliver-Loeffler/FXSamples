@@ -1,4 +1,4 @@
-package sample;
+package net.raumzeitfalle.fxsamples.pocketcalculator;
 
 import org.junit.After;
 import org.junit.Before;

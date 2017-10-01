@@ -1,14 +1,14 @@
-package sample;
+package net.raumzeitfalle.fxsamples.pocketcalculator;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
-import sample.modulesview.ModulesViewController;
-import sample.modulesview.ModulesViewModel;
-import sample.calculator1.CalculatorController;
-import sample.calculator1.CalculatorModel;
-import sample.calculator2.BigDecimalCalculatorController;
-import sample.calculator2.BigDecimalCalculatorModel;
+import net.raumzeitfalle.fxsamples.pocketcalculator.bigdecimal.BigDecimalCalculatorController;
+import net.raumzeitfalle.fxsamples.pocketcalculator.bigdecimal.BigDecimalCalculatorModel;
+import net.raumzeitfalle.fxsamples.pocketcalculator.modulesview.ModulesViewController;
+import net.raumzeitfalle.fxsamples.pocketcalculator.modulesview.ModulesViewModel;
+import net.raumzeitfalle.fxsamples.pocketcalculator.simple.CalculatorController;
+import net.raumzeitfalle.fxsamples.pocketcalculator.simple.CalculatorModel;
 
 import java.io.IOException;
 

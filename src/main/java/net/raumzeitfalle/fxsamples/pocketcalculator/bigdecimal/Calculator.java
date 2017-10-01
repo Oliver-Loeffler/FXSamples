@@ -1,7 +1,7 @@
-package sample.calculator2;
+package net.raumzeitfalle.fxsamples.pocketcalculator.bigdecimal;
 
 import javafx.beans.property.ReadOnlyStringProperty;
-import sample.calculator2.BigDecimalCalculatorModel.Operation;
+import net.raumzeitfalle.fxsamples.pocketcalculator.bigdecimal.BigDecimalCalculatorModel.Operation;
 
 public interface Calculator {
 	void takeInput(char input);

@@ -1,8 +1,9 @@
-package sample.calculator2;
+package net.raumzeitfalle.fxsamples.pocketcalculator.bigdecimal;
 
 import org.junit.Test;
 
-import sample.calculator2.BigDecimalCalculatorModel.Operation;
+import net.raumzeitfalle.fxsamples.pocketcalculator.bigdecimal.BigDecimalCalculatorModel;
+import net.raumzeitfalle.fxsamples.pocketcalculator.bigdecimal.BigDecimalCalculatorModel.Operation;
 
 import java.math.BigDecimal;
 
