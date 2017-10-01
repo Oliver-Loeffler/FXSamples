@@ -18,6 +18,7 @@ The idea for this project was born at the JavaFX for Business Applications works
  * ControlsFX: http://fxexperience.com/controlsfx/
  * FormsFX: https://www.slideshare.net/DirkLemmermann/introduction-to-formsfx
  * FXExperience: http://fxexperience.com
+ * Comprehensive GUI testing for Vocabhunter: https://vocabhunter.github.io/2016/07/27/TestFX.html
 
 **APIs being used:**
  * JavaFX: https://docs.oracle.com/javase/9/docs/api/overview-summary.html#JavaFX
