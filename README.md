@@ -4,6 +4,7 @@ This project has exploratory :warning: character.
 
 **APIs being used:**
  * JavaFX: https://docs.oracle.com/javase/9/docs/api/overview-summary.html#JavaFX
+ * JavaSE 8 Client: http://docs.oracle.com/javase/8/javase-clienttechnologies.htm
  * TestFX: https://github.com/TestFX/TestFX
  * Apache Maven: https://github.com/apache/maven
 
