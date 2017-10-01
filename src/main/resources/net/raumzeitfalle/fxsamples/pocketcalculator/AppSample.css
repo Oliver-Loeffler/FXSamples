@@ -1,17 +1,17 @@
 @font-face {
-    font-family: 'Digital-7';
-    src: url('digital-7.ttf');
+    font-family: 'Segment7';
+    src: url('Segment7Standard.otf');
 }
 
 .result {
-    -fx-font-family: "Digital-7";
-    -fx-font-size: 64px;
+    -fx-font-family: "Segment7";
+    -fx-font-size: 56px;
     -fx-background-color: black;
     -fx-text-fill: lawngreen;
 }
 
 .bigDecimalResult {
-    -fx-font-family: "Digital-7";
+    -fx-font-family: "Segment7";
     -fx-font-size: 64px;
     -fx-background-color: black;
     -fx-text-fill: deepskyblue;

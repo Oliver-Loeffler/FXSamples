@@ -40,18 +40,12 @@
             <Button fx:id="two" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Button fx:id="three" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <Button fx:id="zero" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="0" GridPane.columnIndex="3" />
-             <Button fx:id="multiply" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
-                     mnemonicParsing="false" text="x" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+             <Button fx:id="multiply" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="x" GridPane.columnIndex="4" GridPane.rowIndex="1" />
             <Button fx:id="divide" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="/" GridPane.columnIndex="5" GridPane.rowIndex="1" />
             <Button fx:id="plus" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="+" GridPane.columnIndex="4" />
-             <Button fx:id="minus" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
-                     mnemonicParsing="false" text="-" GridPane.columnIndex="5"/>
-             <Button fx:id="equals" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
-                     mnemonicParsing="false" prefHeight="90.0" prefWidth="180.0" text="=" GridPane.columnIndex="4"
-                     GridPane.columnSpan="2" GridPane.rowIndex="2"/>
-             <Button fx:id="clear" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
-                     mnemonicParsing="false" text="C" GridPane.columnIndex="3" GridPane.rowIndex="1"
-                     GridPane.rowSpan="2"/>
+             <Button fx:id="minus" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="-" GridPane.columnIndex="5" />
+             <Button fx:id="equals" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="90.0" prefWidth="180.0" text="=" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+             <Button fx:id="clear" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="C" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="2" />
          </children>
       </GridPane>
    </center>
@@ -64,9 +58,9 @@
           <RowConstraints />
         </rowConstraints>
          <children>
-            <TextField fx:id="result" alignment="BASELINE_RIGHT" blendMode="DARKEN" editable="false" maxHeight="100.0" minHeight="100.0" minWidth="-Infinity" prefHeight="100.0" styleClass="result" text="78">
+            <TextField fx:id="result" alignment="BASELINE_RIGHT" blendMode="DARKEN" editable="false" maxHeight="100.0" minHeight="100.0" minWidth="-Infinity" prefHeight="100.0" styleClass="result" text="123.456">
                <padding>
-                  <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+                  <Insets bottom="16.0" left="24.0" right="24.0" top="12.0" />
                </padding>
                <opaqueInsets>
                   <Insets />
@@ -78,8 +72,7 @@
                   <Glow level="1.0" />
                </effect>
             </TextField>
-             <TextField fx:id="resultcover" blendMode="ADD" maxHeight="100.0" minHeight="100.0" prefHeight="100.0"
-                        prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@../AppSample.css">
+             <TextField fx:id="resultcover" blendMode="ADD" maxHeight="100.0" minHeight="100.0" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@../AppSample.css">
                <effect>
                   <InnerShadow color="#05ff00" height="44.91" radius="24.972499999999997" width="56.98" />
                </effect>
@@ -94,10 +87,9 @@
       </GridPane>
    </top>
     <bottom>
-        <Label fx:id="operation" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label"
-               textAlignment="RIGHT" BorderPane.alignment="CENTER">
+        <Label fx:id="operation" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" textAlignment="RIGHT" BorderPane.alignment="CENTER">
             <padding>
-                <Insets bottom="5.0" left="20.0" right="20.0" top="5.0"/>
+                <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
             </padding>
         </Label>
     </bottom>

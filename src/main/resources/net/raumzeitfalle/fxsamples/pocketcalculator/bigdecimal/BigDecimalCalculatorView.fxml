@@ -59,9 +59,9 @@
           <RowConstraints />
         </rowConstraints>
          <children>
-            <TextField fx:id="bigDecimalResult" alignment="BASELINE_RIGHT" blendMode="DARKEN" editable="false" maxHeight="100.0" minHeight="100.0" minWidth="-Infinity" prefHeight="100.0" styleClass="bigDecimalResult" text="0.0">
+            <TextField fx:id="bigDecimalResult" alignment="BASELINE_RIGHT" blendMode="DARKEN" editable="false" maxHeight="110.0" minHeight="110.0" minWidth="-Infinity" prefHeight="110.0" styleClass="bigDecimalResult" text="3.1415">
                <padding>
-                  <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+                  <Insets bottom="18.0" left="24.0" right="24.0" top="12.0" />
                </padding>
                <opaqueInsets>
                   <Insets />
@@ -73,7 +73,7 @@
                     <Glow level="1.0" />
                 </effect>
             </TextField>
-             <TextField fx:id="resultcover" blendMode="ADD" editable="false" maxHeight="100.0" minHeight="100.0" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@../AppSample.css">
+             <TextField fx:id="resultcover" blendMode="ADD" editable="false" maxHeight="110.0" minHeight="110.0" prefHeight="110.0" prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@../AppSample.css">
                <effect>
                   <InnerShadow color="#0075ff" height="50.94" radius="40" width="56.98" />
                </effect>
