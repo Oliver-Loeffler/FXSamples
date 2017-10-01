@@ -2,7 +2,6 @@ package sample.calculator1;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -154,14 +153,6 @@ public class CalculatorController implements Initializable {
         model.setB(0);
         model.setResult(0);
         toggleOperand(true, CalculatorModel.Operation.NONE);
-    }
-
-    private void divisionByZeroAlert() {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setTitle("Division By Zero");
-        //alert.setHeaderText("Arithmetic ");
-        alert.setContentText("Division by Zero is not defined");
-        alert.showAndWait();
     }
 
 }
