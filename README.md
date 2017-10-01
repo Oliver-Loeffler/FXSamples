@@ -28,4 +28,9 @@ A typical business application consisting of multiple views organized in tabs.
 The goal is here, to demonstrate how to decouple GUI logic from business logic. 
 Furthermore TestFX capabilities for testing JavaFX controls are explored.
 
-![Screenshot](https://github.com/Oliver-Loeffler/FXSamples/blob/master/pages/PocketCalculator.png)
+![Screenshot](pages/PocketCalculator.png)
+
+## Other considerable points ##
+
+ **Dependency Injection using @Inject**
+  * http://www.javamagazine.mozaicreader.com/SeptOct2017/Twitter#&pageSet=54&page=0
