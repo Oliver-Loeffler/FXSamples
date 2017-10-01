@@ -4,9 +4,6 @@ import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import sample.modulesview.ModulesViewModel;
-
-import java.io.IOException;
 
 public class Main extends Application {
 
