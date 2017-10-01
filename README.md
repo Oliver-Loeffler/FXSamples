@@ -2,12 +2,12 @@
 Examples how to build apps using the JavaFX & TestFX APIs.
 This project has exploratory :warning: character.
 
-**APIs being used**
+**APIs being used:**
  * JavaFX: https://docs.oracle.com/javase/9/docs/api/overview-summary.html#JavaFX
  * TestFX: https://github.com/TestFX/TestFX
  * Apache Maven: https://github.com/apache/maven
 
-**Goals**
+**Goals:**
  * explore JavaFX concepts
  * discover and try out pattern to decouple GUI from business logic
  * explore concepts for automated testing of GUI functionality
