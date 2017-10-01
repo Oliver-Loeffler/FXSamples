@@ -1,6 +1,18 @@
 # FXSamples
-Examples how to build apps in JavaFX using TestFX and Continuous Integration
+Examples how to build apps using the JavaFX & TestFX APIs.
 This project has exploratory :warning: character.
+
+**APIs being used**
+ * JavaFX: https://docs.oracle.com/javase/9/docs/api/overview-summary.html#JavaFX
+ * TestFX: https://github.com/TestFX/TestFX
+ * Apache Maven: https://github.com/apache/maven
+
+**Goals**
+ * explore JavaFX concepts
+ * discover and try out pattern to decouple GUI from business logic
+ * explore concepts for automated testing of GUI functionality
+ * implement everything in a Maven build
+ * have everything runnable in headless mode to enable continuous builds
 
 ## Pocket Calculator ##
 A typical business application consisting of multiple views organized in tabs.
