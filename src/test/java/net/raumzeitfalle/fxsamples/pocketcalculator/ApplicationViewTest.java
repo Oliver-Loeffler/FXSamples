@@ -10,6 +10,9 @@ import net.raumzeitfalle.fxsamples.pocketcalculator.ViewFactory;
 import org.junit.Test;
 
 import javax.imageio.ImageIO;
+
+import static org.junit.Assert.*;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;

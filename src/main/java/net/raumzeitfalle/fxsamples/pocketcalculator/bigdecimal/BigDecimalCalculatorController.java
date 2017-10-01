@@ -10,10 +10,6 @@ import javafx.scene.layout.*;
 
 public class BigDecimalCalculatorController implements Initializable {
 
-
-    @FXML
-    private BorderPane rootpane;
-
     @FXML
     private Button seven;
 
@@ -64,9 +60,6 @@ public class BigDecimalCalculatorController implements Initializable {
 
     @FXML
     private TextField bigDecimalResult;
-
-    @FXML
-    private TextField resultcover;
 
     @FXML
     private Label operation;
