@@ -48,6 +48,7 @@ Furthermore TestFX capabilities for testing JavaFX controls are explored.
   * Blogs:
     * https://blog.codecentric.de/en/2015/11/first-steps-with-java9-jigsaw-part-1/
     * http://www.baeldung.com/project-jigsaw-java-modularity
+    * https://de.paperblog.com/java-9-erste-modul-generierung-modul-infojava-mit-eclipse-beta-for-oxygen-1320418/
   
  **Dependency Injection using @Inject**
   * http://www.javamagazine.mozaicreader.com/SeptOct2017/Twitter#&pageSet=54&page=0
