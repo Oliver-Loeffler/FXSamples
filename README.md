@@ -2,7 +2,8 @@
 Examples how to build apps using the JavaFX & TestFX APIs.
 This project has exploratory :warning: character.
 This project requires Java 1.8 JDK to compile (with test) and run.
-See Java9 remarks.
+See [Java 9 remarks](#java9-remarks).
+
 
 The idea for this project was born at the JavaFX for Business Applications workshop with Hendrik Ebbers. There is great software available, great frameworks for JavaFX but somehow often there is a lack of good examples.
 
@@ -41,7 +42,7 @@ Furthermore TestFX capabilities for testing JavaFX controls are explored.
  * TestFX: https://github.com/TestFX/TestFX
  * Apache Maven: https://github.com/apache/maven
 
-## Java9 remarks ##
+## Java9 Remarks ##
 
 When a `module-info.java file` is placed into `src/`, the project will compile with Java9 and the application will run but `mvn test` will fail due to illegal private API access by TestFX. 
 
