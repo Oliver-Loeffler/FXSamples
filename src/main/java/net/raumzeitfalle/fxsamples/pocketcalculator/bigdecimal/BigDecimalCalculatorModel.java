@@ -22,10 +22,6 @@ public class BigDecimalCalculatorModel implements Calculator {
 
     private SimpleObjectProperty<Operation> operation = new SimpleObjectProperty<>(Operation.NONE);
 
-    enum Operation {
-        NONE, ADD, SUBTRACT, MULTIPLY, DIVIDE
-    }
-
     public BigDecimalCalculatorModel() {
         resultText = new SimpleStringProperty("0");
         result = BigDecimal.ZERO;
@@ -126,15 +122,15 @@ public class BigDecimalCalculatorModel implements Calculator {
 		 		}
 		 	case '.': { if (value.contains(".")) break;
 		 				if (value.equals("")) value = "0";}
-        		case '1':; 
-        		case '2':;
-        		case '3':;
-        		case '4':;
-        		case '5':;
-        		case '6':;
-        		case '7':;
-        		case '8':;
-        		case '9':;
+        		case '1':
+        		case '2':
+        		case '3':
+        		case '4':
+        		case '5':
+        		case '6':
+        		case '7':
+        		case '8':
+        		case '9':
         		case '0': this.resultText.setValue(value +input );
         		default: break;
 		}

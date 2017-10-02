@@ -3,7 +3,7 @@ package net.raumzeitfalle.fxsamples.pocketcalculator.bigdecimal;
 import org.junit.Test;
 
 import net.raumzeitfalle.fxsamples.pocketcalculator.bigdecimal.BigDecimalCalculatorModel;
-import net.raumzeitfalle.fxsamples.pocketcalculator.bigdecimal.BigDecimalCalculatorModel.Operation;
+import net.raumzeitfalle.fxsamples.pocketcalculator.bigdecimal.Calculator.Operation;
 
 import java.math.BigDecimal;
 

@@ -19,11 +19,11 @@ public class ViewFactory {
     }
     
     public static Parent createBigDecimalCalculatorView() throws IOException {
-    		FXMLLoader loader = new FXMLLoader(BigDecimalCalculatorController.class.getResource("BigDecimalCalculatorView.fxml"));
-    		BigDecimalCalculatorModel model = new BigDecimalCalculatorModel();
-    		BigDecimalCalculatorController controller = new BigDecimalCalculatorController(model);
-    		loader.setController(controller);
-    		return loader.load();
+        FXMLLoader loader = new FXMLLoader(BigDecimalCalculatorController.class.getResource("BigDecimalCalculatorView.fxml"));
+        BigDecimalCalculatorModel model = new BigDecimalCalculatorModel();
+        BigDecimalCalculatorController controller = new BigDecimalCalculatorController(model);
+        loader.setController(controller);
+        return loader.load();
     }
 
     public static Parent createSimpleCalculatorView() throws IOException {
@@ -43,8 +43,10 @@ public class ViewFactory {
 
     public static Parent createApplicationView(Stage primaryStage) throws IOException {
         ModulesViewModel model = new ModulesViewModel();
+
         Parent modulesView = ViewFactory.createModulesView(model);
         primaryStage.setTitle("Business Application");
+
         Parent calculatorView = ViewFactory.createSimpleCalculatorView();
         model.addFromNode(calculatorView, "SimpleCalculator");
         

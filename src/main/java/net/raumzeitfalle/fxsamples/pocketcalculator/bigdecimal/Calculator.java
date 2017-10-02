@@ -1,9 +1,13 @@
 package net.raumzeitfalle.fxsamples.pocketcalculator.bigdecimal;
 
 import javafx.beans.property.ReadOnlyStringProperty;
-import net.raumzeitfalle.fxsamples.pocketcalculator.bigdecimal.BigDecimalCalculatorModel.Operation;
 
 public interface Calculator {
+
+	enum Operation {
+		NONE, ADD, SUBTRACT, MULTIPLY, DIVIDE
+	}
+
 	void takeInput(char input);
 	void acceptInput();
 	void calculate();
