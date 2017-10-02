@@ -1,6 +1,8 @@
 # FXSamples
 Examples how to build apps using the JavaFX & TestFX APIs.
 This project has exploratory :warning: character.
+Also this project does not successfully build using JDK9 even though Java1.8 compatibility is requested in POM.XML.
+Cause seems to be TestFX.
 
 The idea for this project was born at the JavaFX for Business Applications workshop with Hendrik Ebbers. There is great software available, great frameworks for JavaFX but somehow often there is a lack of good examples.
 
@@ -45,6 +47,7 @@ Furthermore TestFX capabilities for testing JavaFX controls are explored.
   * Modularization: http://openjdk.java.net/projects/jigsaw/quick-start
   * Maven Example: http://javadeveloperzone.com/java-9/java-9-module-example-using-maven/
   * Eclipse and Java9: https://wiki.eclipse.org/Configure_Eclipse_for_Java_9
+  * https://dzone.com/articles/jdk9-howto-create-a-java-run-time-image-with-maven
   * **Blogs:**
     * https://blog.codecentric.de/en/2015/11/first-steps-with-java9-jigsaw-part-1/
     * http://www.baeldung.com/project-jigsaw-java-modularity
