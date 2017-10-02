@@ -1,8 +1,8 @@
 # FXSamples
 Examples how to build apps using the JavaFX & TestFX APIs.
 This project has exploratory :warning: character.
-Also this project does not successfully build using JDK9 even though Java1.8 compatibility is requested in POM.XML.
-Cause seems to be TestFX.
+This project requires Java 1.8 JDK to compile (with test) and run.
+See Java9 remarks.
 
 The idea for this project was born at the JavaFX for Business Applications workshop with Hendrik Ebbers. There is great software available, great frameworks for JavaFX but somehow often there is a lack of good examples.
 
@@ -41,6 +41,46 @@ Furthermore TestFX capabilities for testing JavaFX controls are explored.
  * TestFX: https://github.com/TestFX/TestFX
  * Apache Maven: https://github.com/apache/maven
 
+## Java9 remarks ##
+
+When a `module-info.java file` is placed into `src/`, the project will compile with Java9 and the application will run but `mvn test` will fail due to illegal private API access by TestFX. 
+
+Following adjustments are required:
+
+ * module-info.java
+
+ ```java 
+ module net.raumzeitfalle.fxsamples.pocketcalculator {
+    requires javafx.base;
+    requires javafx.controls;
+    requires javafx.fxml;
+    exports net.raumzeitfalle.fxsamples.pocketcalculator.*;
+ }
+ ```
+
+ * POM.XML
+
+ ```xml 
+ <project>
+ 	[...]
+	<build>
+		[...]
+		<plugins>
+	    		<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-compiler-plugin</artifactId>
+		        	[...]
+		        	<configuration>
+			            <source>9</source>
+			            <target>9</target>
+	            	[...]
+	        		</configuration>
+	    		</plugin>
+		</plugin>
+	 </build>
+</project>
+ ```
+ 
 ## Other considerable points ##
 
  **Resources for Java9 migration**
