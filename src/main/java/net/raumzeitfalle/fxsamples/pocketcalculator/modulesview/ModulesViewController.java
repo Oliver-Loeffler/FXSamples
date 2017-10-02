@@ -1,14 +1,8 @@
 package net.raumzeitfalle.fxsamples.pocketcalculator.modulesview;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
-import javafx.beans.InvalidationListener;
-import javafx.beans.Observable;
-import javafx.collections.ListChangeListener;
 import javafx.collections.SetChangeListener;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 
