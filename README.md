@@ -45,10 +45,12 @@ Furthermore TestFX capabilities for testing JavaFX controls are explored.
   * Modularization: http://openjdk.java.net/projects/jigsaw/quick-start
   * Maven Example: http://javadeveloperzone.com/java-9/java-9-module-example-using-maven/
   * Eclipse and Java9: https://wiki.eclipse.org/Configure_Eclipse_for_Java_9
-  * Blogs:
+  * **Blogs:**
     * https://blog.codecentric.de/en/2015/11/first-steps-with-java9-jigsaw-part-1/
     * http://www.baeldung.com/project-jigsaw-java-modularity
     * https://de.paperblog.com/java-9-erste-modul-generierung-modul-infojava-mit-eclipse-beta-for-oxygen-1320418/
+  * **Examples:**
+     * Multi-Module-Maven: https://github.com/cfdobber/maven-java9-jigsaw 
   
  **Dependency Injection using @Inject**
   * http://www.javamagazine.mozaicreader.com/SeptOct2017/Twitter#&pageSet=54&page=0
