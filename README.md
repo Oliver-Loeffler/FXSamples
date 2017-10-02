@@ -73,7 +73,7 @@ Following adjustments are required:
 		        	<configuration>
 			            <source>9</source>
 			            <target>9</target>
-	            	[...]
+	            		[...]
 	        		</configuration>
 	    		</plugin>
 		</plugin>
