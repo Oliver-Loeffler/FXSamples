@@ -61,8 +61,8 @@
                 <version>8.7.0</version>
                 <configuration>
                     <mainClass>sample.Main</mainClass>
-                    <vendor>Canoo Engineering AG</vendor>
-                    <appName>JavaFX-Application</appName>
+                    <vendor>net.raumzeitfalle</vendor>
+                    <appName>BusinessApplication</appName>
                     <needShortcut>true</needShortcut>
                     <needMenu>true</needMenu>
                 </configuration>
