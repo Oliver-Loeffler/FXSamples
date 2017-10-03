@@ -80,7 +80,8 @@ Following adjustments are required:
  
 ## Other considerable points ##
 
- **Resources for Java9 migration**
+ **Resources for Java 9 migration**
+  * Oracle JDK9 Migration Guide: https://docs.oracle.com/javase/9/migrate/toc.htm
   * Modularization: http://openjdk.java.net/projects/jigsaw/quick-start
   * Maven Example: http://javadeveloperzone.com/java-9/java-9-module-example-using-maven/
   * Eclipse and Java9: https://wiki.eclipse.org/Configure_Eclipse_for_Java_9
