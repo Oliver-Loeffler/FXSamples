@@ -90,6 +90,7 @@ Following adjustments are required:
     * https://blog.codefx.org/java/java-9-migration-guide/
     * http://www.baeldung.com/project-jigsaw-java-modularity
     * https://de.paperblog.com/java-9-erste-modul-generierung-modul-infojava-mit-eclipse-beta-for-oxygen-1320418/
+    * https://www.sitepoint.com/ultimate-guide-to-java-9/
   * **Examples:**
   	 * JavaDeveloperZone: http://javadeveloperzone.com/java-9/java-9-module-example-using-maven/
      * Multi-Module-Maven: https://github.com/cfdobber/maven-java9-jigsaw 
