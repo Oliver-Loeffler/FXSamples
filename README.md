@@ -82,10 +82,10 @@ Following adjustments are required:
 
  **Resources for Java 9 migration**
   * Oracle JDK9 Migration Guide: https://docs.oracle.com/javase/9/migrate/toc.htm
-  * Modularization: http://openjdk.java.net/projects/jigsaw/quick-start
-  * Maven Example: http://javadeveloperzone.com/java-9/java-9-module-example-using-maven/
-  * Eclipse and Java9: https://wiki.eclipse.org/Configure_Eclipse_for_Java_9
-  * https://dzone.com/articles/jdk9-howto-create-a-java-run-time-image-with-maven
+  * Open JDK Quick Start on Modularization: http://openjdk.java.net/projects/jigsaw/quick-start
+  * Maven Modularization Example: http://javadeveloperzone.com/java-9/java-9-module-example-using-maven/
+  * How to configure Eclipse for Java9: https://wiki.eclipse.org/Configure_Eclipse_for_Java_9
+  * DZone Guide on creating runtime images: https://dzone.com/articles/jdk9-howto-create-a-java-run-time-image-with-maven
   * **Blogs:**
     * https://blog.codecentric.de/en/2015/11/first-steps-with-java9-jigsaw-part-1/
     * http://www.baeldung.com/project-jigsaw-java-modularity
