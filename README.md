@@ -86,6 +86,7 @@ Following adjustments are required:
   * How to configure Eclipse for Java9: https://wiki.eclipse.org/Configure_Eclipse_for_Java_9
   * DZone Guide on creating runtime images: https://dzone.com/articles/jdk9-howto-create-a-java-run-time-image-with-maven
   * **Blogs:**
+    * Real World Java 9: https://trishagee.github.io/presentation/real_world_java_9/
     * https://blog.codecentric.de/en/2015/11/first-steps-with-java9-jigsaw-part-1/
     * https://blog.codefx.org/java/java-9-migration-guide/
     * http://www.baeldung.com/project-jigsaw-java-modularity
