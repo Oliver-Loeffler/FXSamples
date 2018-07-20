@@ -19,6 +19,13 @@ The goal is here, to demonstrate how to decouple GUI logic from business logic.
 Furthermore TestFX capabilities for testing JavaFX controls are explored.
 
 ![Screenshot](pages/PocketCalculator.png)
+
+Run to test, to build, to package:
+```bash
+	mvnw test
+	mvnw jfx:jar
+	mvnw jfx:native
+```
  
  
 ## Resources 

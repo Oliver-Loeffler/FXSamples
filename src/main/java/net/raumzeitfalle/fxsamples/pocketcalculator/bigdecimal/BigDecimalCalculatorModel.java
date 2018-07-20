@@ -15,6 +15,8 @@ public class BigDecimalCalculatorModel implements Calculator {
     private static final MathContext MATH_CONTEXT = MathContext.DECIMAL128;
 
     private final StringProperty resultText;
+    
+    private final StringProperty lastEnteredValue;
 
     private BigDecimal result;
 
@@ -24,6 +26,7 @@ public class BigDecimalCalculatorModel implements Calculator {
 
     public BigDecimalCalculatorModel() {
         resultText = new SimpleStringProperty("0");
+        lastEnteredValue = new SimpleStringProperty("");
         result = BigDecimal.ZERO;
         stack = new Stack<>();
     }
@@ -32,12 +35,17 @@ public class BigDecimalCalculatorModel implements Calculator {
         return result;
     }
     
+    public ReadOnlyStringProperty previouslyEnteredValue() {
+    	return lastEnteredValue;
+    }
+    
     public SimpleObjectProperty<Operation> operationProperty() {
         return operation;
     }
 
     public void setOperation(Operation operation) {
         this.operation.set(operation);
+        this.resultText.set("0");
     }
 
     void add() {
@@ -82,6 +90,7 @@ public class BigDecimalCalculatorModel implements Calculator {
     private void store() {
         resultText.setValue(result.toString());
         stack.push(result);
+        updatePreviouslyEnteredValue();
     }
 
     int operands() {
@@ -100,6 +109,7 @@ public class BigDecimalCalculatorModel implements Calculator {
             }
         }
         operation.setValue(Operation.NONE);
+        resultText.setValue(result.toString());
     }
 
     void load(BigDecimal operand) {
@@ -109,7 +119,16 @@ public class BigDecimalCalculatorModel implements Calculator {
     			stack.pop();
     		}
     		stack.push(operand);
+    		updatePreviouslyEnteredValue();
     }
+
+	private void updatePreviouslyEnteredValue() {
+		if (stack.size() > 1) {
+			lastEnteredValue.set(stack.get(1).toString());
+		} else if (stack.size() == 1) {
+			lastEnteredValue.set(stack.get(0).toString());	
+		}
+	}
 
 	public void takeInput(char input) {
 		String value = this.resultText.get();
@@ -142,5 +161,9 @@ public class BigDecimalCalculatorModel implements Calculator {
 	public void acceptInput() {
 		BigDecimal operand = new BigDecimal(this.resultText.get());
 		load(operand);
+	}
+
+	public void clearResultText() {
+		this.resultText.set("");
 	}
 }
