@@ -21,7 +21,18 @@ Furthermore TestFX capabilities for testing JavaFX controls are explored.
 ![Screenshot](pages/PocketCalculator.png)
 
 Run to test, to build, to package:
-```bash
+
+On bash:
+
+```cmd
+	./mvnw test
+	./mvnw jfx:jar
+	./mvnw jfx:native
+```
+
+On Windows command line:
+
+```cmd
 	mvnw test
 	mvnw jfx:jar
 	mvnw jfx:native
